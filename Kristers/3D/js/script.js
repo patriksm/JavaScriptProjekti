@@ -73,14 +73,14 @@ var objekti = [
   [-150, 50, 0, 0, 0, 0, 25, 25, "yellow", 1], //grīda
   //[0]x, [1]y, [2]z, [3]rx, [4]ry, [5]rz, [6]width, [7]height, [8]color, [9]opacity, [10]tekstūras mērogošana
 
-  [-150, 25, 700, 0, 0, 0, 25, 25, "red", 1], //grīda
-  //[0]x, [1]y, [2]z, [3]rx, [4]ry, [5]rz, [6]width, [7]height, [8]color, [9]opacity, [10]tekstūras mērogošana
+  [-140, 50, 710, 0, 0, 0, 20, 20, "url/textures/object.jpg", 1],
+  [-140, 50, 690, 0, 0, 0, 20, 20, "green", 1],
+  [-150, 50, 700, 0, 90, 0, 20, 20, "blue", 1],
+  [-130, 50, 700, 0, 90, 0, 20, 20, "blue", 1],
 
-  [-600, 0, 340, 0, 0, 0, 25, 25, "green", 1], //grīda
-  //[0]x, [1]y, [2]z, [3]rx, [4]ry, [5]rz, [6]width, [7]height, [8]color, [9]opacity, [10]tekstūras mērogošana
+  [-600, 50, 340, 0, 0, 0, 25, 25, "green", 1],
 
-  [600, -25, 340, 0, 0, 0, 25, 25, "white", 1], //grīda
-  //[0]x, [1]y, [2]z, [3]rx, [4]ry, [5]rz, [6]width, [7]height, [8]color, [9]opacity, [10]tekstūras mērogošana
+  [600, 50, 340, 0, 0, 0, 25, 25, "white", 1],
 ];
 
 var pressUp = 0;
@@ -321,6 +321,7 @@ function coorReTransform(x3, y3, z3, rxc, ryc, rzc) {
 function zimetObjektus(mansObj) {
   for (let i = 0; i < mansObj.length; i++) {
     let jaunsObjekts = document.createElement("div");
+    jaunsObjekts.style.position = "absolute";
     jaunsObjekts.className = "objekts";
     jaunsObjekts.id = `objekts${i}`;
     jaunsObjekts.style.width = `${mansObj[i][6]}px`;
@@ -333,6 +334,7 @@ function zimetObjektus(mansObj) {
     }px) rotateX(${mansObj[i][3]}deg) rotateY(${mansObj[i][4]}deg) rotateZ(${
       mansObj[i][5]
     }deg)`;
+    jaunsObjekts.style.backgroundSize = "200px";
     world.append(jaunsObjekts);
   }
 }
