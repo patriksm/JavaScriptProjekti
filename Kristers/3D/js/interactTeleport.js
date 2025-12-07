@@ -17,10 +17,15 @@ function interactTeleport(tel, obj) {
         pawn.x = 900;
         pawn.y = 0;
         pawn.z = 900;
+        canShoot = false;
         izvObj = structuredClone(spelesElementi[level][1]);
+        izvPistole = structuredClone(spelesElementi[level][3]);
+        izvMunicija = structuredClone(spelesElementi[level][4]);
         createWorld(spelesElementi[level][0]);
         zimetObjektus(izvObj, `objekts`);
         zimetObjektus(spelesElementi[level][2], `teleports`);
+        zimetObjektus(izvPistole, `pistole`);
+        zimetObjektus(izvMunicija, `municija`);
       } else {
         kludasSkana.play();
       }
