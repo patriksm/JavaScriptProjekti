@@ -25,9 +25,6 @@ buttonStart.onclick = function(){
   zimetObjektus(spelesElementi[level][2], `teleports`);
   zimetObjektus(izvPistole, `pistole`);
   zimetObjektus(izvMunicija, `municija`);
-  manaLode.push(zimetManuLodi(lode_skaits));
-  manaLodeData.push(new player());
-  lode_skaits++;
   timerGame = setInterval(update, 10);
 }
 
@@ -44,8 +41,5 @@ buttonLimenis.onclick = function(){
   zimetObjektus(spelesElementi[level][2], `teleports`);
   zimetObjektus(izvPistole, `pistole`);
   zimetObjektus(izvMunicija, `municija`);
-  manaLode.push(zimetManuLodi(lode_skaits));
-  manaLodeData.push(new player());
-  lode_skaits++;
   timerGame = setInterval(update, 10);
 }
