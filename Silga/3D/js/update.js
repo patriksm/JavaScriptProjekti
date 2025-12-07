@@ -33,6 +33,10 @@ function update() { // mūsu 3D pasaules izmaiņas
     }
 
     document.onclick = function () {
+
+        myh3.textContent = "Nevari šaut";
+        mansTeksts.appendChild(myh3);
+
         if (lock && canShoot && irPistole) {
             manaLode.push(zimetManuLodi(lode_skaits));
             manaLodeData.push(new player(pawn.x, pawn.y, pawn.z, pawn.rx, pawn.ry + 45, pawn.rz, 5, 5));

@@ -35,10 +35,17 @@ buttonLimenis.onclick = function(){
   menuStart.style.display = "none";
   canlock = true;
   level = 2;
-  izvObj = structuredClone(spelesElementi[level][1]);
   world.innerHTML = "";
+  izvObj = structuredClone(spelesElementi[level][1]);
+  izvPistole = structuredClone(spelesElementi[level][3]);
+  izvMunicija = structuredClone(spelesElementi[level][4]);
   createWorld(spelesElementi[level][0]);
   zimetObjektus(izvObj, `objekts`);
   zimetObjektus(spelesElementi[level][2], `teleports`);
+  zimetObjektus(izvPistole, `pistole`);
+  zimetObjektus(izvMunicija, `municija`);
+  manaLode.push(zimetManuLodi(lode_skaits));
+  manaLodeData.push(new player());
+  lode_skaits++;
   timerGame = setInterval(update, 10);
 }
